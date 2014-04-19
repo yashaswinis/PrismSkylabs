@@ -1,0 +1,7 @@
+BruteForceAlgorithm has been implemented in BruteForce class and tested in BruteForceTest class.
+
+Running Time of the brute force algorithm is quadradtic, that is O(n^2)
+
+A more efficient solution has been implemented in the class MaxContiguousSubset class. The idea is to keep track of only the subsets whose sum is greater than 0. The running time of the algorithm is linear, that is O(n). The algorithm just makes one pass through the array and keeps track of the current maximum sum. At each iteration, it updates the current maximum sum if by adding the current value, the sum become greater. It resets the current maximum sum if the value is less than 0. The algorithm also tracks the startIndex and endIndex of the subset.
+
+My approach to the problem was first to make 2 passes through the array so that I can calculate all the subsets and their sum and then find the maximum sum among them. But that would involve calculating sum of the same subsets multiple times in brute force algorithm. Dynamic programming makes it more efficient. To implement dynamic programming, I used two variables to keep track of the current sum (till the current seen array element) in the loop and also the overall maximum sum. At each iteration, I check the current sum against the maximum sum and update it if the sum is greater.
